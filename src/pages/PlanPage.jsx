@@ -46,6 +46,7 @@ export default function PlanPage() {
       })
 
       const data = await response.json()
+      if (!response.ok || data.error) throw new Error(data.error?.message || `API error ${response.status}`)
       const text = data.content[0].text
 
       // Extract JSON from response
