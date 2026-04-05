@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green: #1D9E75;
+  --green-light: #E1F5EE;
+  --green-dark: #0F6E56;
+  --amber: #EF9F27;
+  --blue: #378ADD;
+  --coral: #D85A30;
+  --bg: #F8F7F4;
+  --card: #FFFFFF;
+  --border: rgba(0,0,0,0.08);
+  --text: #1a1a18;
+  --muted: #6B6B65;
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: 'Syne', sans-serif; }
+
+input, textarea, select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  background: var(--card);
+  color: var(--text);
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(29,158,117,0.12);
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+button:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.btn-primary:hover { background: var(--green-dark); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 12px 24px;
+}
+
+.btn-secondary:hover { background: var(--green-light); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.error-msg {
+  font-size: 13px;
+  color: #E24B4A;
+  margin-top: 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
